@@ -1,0 +1,25 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Permissions for Ritim",
+  "windows": ["main", "quick-add"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-show",
+    "core:window:allow-hide",
+    "core:window:allow-close",
+    "core:window:allow-set-focus",
+    "core:window:allow-set-always-on-top",
+    "core:webview:allow-create-webview-window",
+    "core:event:default",
+    "opener:default",
+    "notification:default",
+    "global-shortcut:default",
+    "store:default",
+    "http:default",
+    {
+      "identifier": "http:default",
+      "allow": [{ "url": "https://task.ertugrulaslan.com/*" }]
+    }
+  ]
+}
