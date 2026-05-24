@@ -76,10 +76,10 @@ export function DashboardScreen() {
 
   return (
     <div className="flex flex-col h-screen overflow-hidden">
-      <header className="flex items-center justify-between px-4 h-12 border-b border-zinc-200 dark:border-zinc-800 select-none" data-tauri-drag-region>
-        <div className="flex items-center gap-2">
-          <span className="font-semibold">Ritim</span>
-          {user && <span className="text-xs text-zinc-500">{user.email}</span>}
+      <header className="flex items-center justify-between pl-[78px] pr-3 h-12 border-b border-zinc-200 dark:border-zinc-800 select-none" data-tauri-drag-region>
+        <div className="flex items-center gap-2 min-w-0">
+          <span className="font-semibold shrink-0">Ritim</span>
+          {user && <span className="text-xs text-zinc-500 truncate">{user.email}</span>}
         </div>
         <div className="flex items-center gap-2">
           <button

@@ -19,7 +19,7 @@
         "minWidth": 380,
         "minHeight": 480,
         "resizable": true,
-        "visible": false,
+        "visible": true,
         "decorations": true,
         "titleBarStyle": "Overlay",
         "hiddenTitle": true,
@@ -28,12 +28,6 @@
     ],
     "security": {
       "csp": null
-    },
-    "trayIcon": {
-      "id": "main-tray",
-      "iconPath": "icons/icon.png",
-      "iconAsTemplate": true,
-      "tooltip": "Ritim"
     },
     "macOSPrivateApi": true
   },

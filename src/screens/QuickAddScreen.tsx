@@ -52,9 +52,10 @@ export function QuickAddScreen() {
   }
 
   return (
-    <div className="h-screen p-4 flex items-center" onKeyDown={onKeyDown}>
-      <form onSubmit={onSubmit} className="w-full space-y-3">
-        <div className="text-xs uppercase tracking-wider text-zinc-500" data-tauri-drag-region>
+    <div className="h-screen flex flex-col" onKeyDown={onKeyDown}>
+      <div className="h-7 shrink-0" data-tauri-drag-region></div>
+      <form onSubmit={onSubmit} className="flex-1 px-4 pb-4 space-y-3">
+        <div className="text-xs uppercase tracking-wider text-zinc-500">
           Hızlı Görev (her gün)
         </div>
         <input

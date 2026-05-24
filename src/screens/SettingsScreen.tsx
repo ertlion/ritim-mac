@@ -19,7 +19,7 @@ export function SettingsScreen() {
 
   return (
     <div className="flex flex-col h-screen overflow-hidden">
-      <header className="flex items-center justify-between px-4 h-12 border-b border-zinc-200 dark:border-zinc-800 select-none" data-tauri-drag-region>
+      <header className="flex items-center justify-between pl-[78px] pr-4 h-12 border-b border-zinc-200 dark:border-zinc-800 select-none" data-tauri-drag-region>
         <button onClick={() => navigate(-1)} className="text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-white">
           ← Geri
         </button>

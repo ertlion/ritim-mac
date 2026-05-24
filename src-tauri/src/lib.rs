@@ -85,7 +85,13 @@ pub fn run() {
                 .build(),
         )
         .setup(|app| {
+            eprintln!("[ritim] setup started");
             let app_handle = app.handle().clone();
+
+            match app.default_window_icon() {
+                Some(_) => eprintln!("[ritim] default_window_icon: OK"),
+                None => eprintln!("[ritim] default_window_icon: NONE (tray icon won't render!)"),
+            }
 
             let show_item = MenuItem::with_id(app, "show", "Pencereyi Aç", true, None::<&str>)?;
             let quick_add_item =
@@ -135,6 +141,7 @@ pub fn run() {
                     }
                 })
                 .build(app)?;
+            eprintln!("[ritim] tray icon built successfully");
 
             // Register global shortcut ⌘⇧T
             let combo = Shortcut::new(Some(Modifiers::SUPER | Modifiers::SHIFT), Code::KeyT);
