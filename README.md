@@ -21,10 +21,15 @@ Ritim ([task.ertugrulaslan.com](https://task.ertugrulaslan.com)) için native ma
 ## Kurulum
 
 1. `Ritim.app` dosyasını `/Applications` klasörüne sürükle
-2. İlk açılışta: sağ tık → "Open" (imzalanmamış uygulama uyarısını geç)
-3. Login ekranında email + şifre gir (web panelden hesap oluşturmuş olmalısın)
-4. İlk bildirim için macOS izin verecek
-5. Menu bar'da görünen Ritim ikonuna tıkla → pencere aç/kapa
+2. **Terminal'de bir kez çalıştır** (Finder sürükleme ad-hoc imzayı bozar):
+   ```bash
+   xattr -cr /Applications/Ritim.app && \
+     codesign --force --deep --sign - /Applications/Ritim.app
+   ```
+3. İlk açılışta: sağ tık → "Open" (imzalanmamış uygulama uyarısını geç)
+4. Login ekranında email + şifre gir (web panelden hesap oluşturmuş olmalısın)
+5. İlk bildirim için macOS izin verecek
+6. Menu bar'da görünen Ritim ikonuna tıkla → pencere aç/kapa
 
 ## Geliştirme
 
